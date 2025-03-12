@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins',georgia;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://img.freepik.com/premium-photo/top-view-photographer-workplace-with-copy-space-camera-office-supplies-decorations_67155-5899.jpg),url(https://plus.unsplash.com/premium_photo-1661284820532-f96fce3e9474?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtZXJhJTIwaW4lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww);
+            color: rgb(253, 253, 249);
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: rgba(220, 223, 38, 0.9);
+            color: rgb(19, 16, 16);
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: rgb(22, 19, 19);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .hero {
+            height: 100vh;
+            background: url('https://as1.ftcdn.net/jpg/03/16/54/02/1000_F_316540226_414hHiuH7zt5n1HnMaOX4BWgVPe6AFY5.jpg')peat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 20px;
+        }
+        section {
+            padding: 100px 50px;
+        }
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 50px 0;
+        }
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+        form {
+            max-width: 500px;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: rgb(22, 20, 20);
+        }
+        button {
+            background: #e2bf21;
+            color: rgb(17, 15, 15);
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #e67e22;
+        }
+        footer {
+            background: rgba(221, 224, 48, 0.9);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#" style="color: rgb(14, 12, 12); text-decoration: none;">Welcome to my #PHOTOGRAPHY PORTFOLIO</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>!!..Snapshots Of Happiness..!!</h2>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate photographer who loves to capture the beauty of the world through my lens. Each photo tells a unique story, preserving emotions and experiences forever.With a keen eye for detail and a creative vision,I specialize in landscapes,portraits,wildlife,etc striving to creat visually captivating photographs that resonate deeply with viewers.</p  </section>
+
+    <section id="gallery">
+        <h2>Gallery:<br> 
+            1.Beautiful Landscape<br> 2.Wildlife Photography<br> 3.Throwback To 90s 4.Tradition is Key<br> 5.Golden Memories In Jaisalmer<br> 6.The Earth laughs In Flowers<br> 7.Portrait of a Person<br> 8.Cityscape View<br> 9.Serenity In Every Sunset<br> 10.Lights Up The Night<br> 11.Every Street Tells a Story<br> 12.Roaming Streets Of Village<br> 13.Nature Outlook 14.Indian majesty<br> 15.Cultures,candids,kittens,Mahal,puppetry,chaii & many more.. </h2>
+        <div class="gallery-container">
+            <img src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?cs=srgb&dl=pexels-fotios-photos-1107717.jpg&fm=jpg"height="150"width="130" alt="Beautiful Landscape">            
+            <img src="https://thumbs.dreamstime.com/b/photo-collage-pet-portraits-domestic-animals-270077766.jpg"height="150"width="135" alt="Wildlife Photography">
+            <img src="https://i.pinimg.com/736x/7c/29/c9/7c29c998ca72cf883199d20948bd2a09.jpg"height="100"width="100" alt="Throwback To 90s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlrxRu-VxjbIYT5SB10py3l8Dd7UHOW9jD2g&s"height="155"width="140" alt="Tradition is Key">
+            <img src="https://thumbs.dreamstime.com/b/majestic-decorated-dromedary-camel-vibrant-bikaner-festival-rajasthan-india-long-exposure-celebration-witness-354361171.jpg"height="200"width="250" alt="Golden Memories In Jaisalmer">
+            <img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2019/09/shutterstock_1299040981.jpg"height="135"width="130" alt="The Earth laughs In Flowers">
+            <img src="https://images.pexels.com/photos/27155549/pexels-photo-27155549/free-photo-of-smiling-women-in-traditional-clothing-sitting-with-wax-candle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"height="160"width="145" alt="Portrait of a Person">
+            <img src="https://t4.ftcdn.net/jpg/02/86/31/75/360_F_286317553_ApfLOFzSjv7rXt6aQ46TetRccdmIO25P.jpg"height="140"width="135" alt="Cityscape View">
+            <img src="https://blog.coverglassusa.com/hs-fs/hubfs/CGU_5_11_17a.jpg?width=744&name=CGU_5_11_17a.jpg"height="145"width="140" alt="Serenity In Every Sunset">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeom2hEZpVslh2Ey3T3_PN13TnQTp18dkW8Q&s"height="140"width="135" alt="Lights Up The Night">
+    <img src="https://spm-issues.s3.amazonaws.com/042/Javier-Damlow-05.jpg"height="150"width="140" alt="Every Street Tells a Story">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFp-aoxBAQIUmORU3BkNxufANcF8hboXihyhPilrYCHfbrBSUVv7zRTB8LVdhw2vP3N0&usqp=CAU"height="157"width="145" alt="Roaming Streets Of Village">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQndtOxWBHImdSkOfKBirNOMnhuOli3FU4_9w&s"height="160"width="150" alt="Nature Outlook">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_uY3JJXy3lcB9oma5OiDdBI-8CKyRl8T2lu2_3qd5zkt0jsmjJLbEYA3pr4JEXYzNR2E&usqp=CAU"height="150"width="147" alt="Indian majesty">
+<img src="https://media.istockphoto.com/id/890689796/photo/ganga-aarti-in-banaras.jpg?s=612x612&w=0&k=20&c=YZ9AeKna6T_LYsDOmPTdfVBlW47WpkINFPtFFwhukZU="height="150"width="145" alt="Cultures">
+<img src="https://www.focuzstudios.in/wp-content/uploads/2014/07/brahmin-candid-wedding-photography-chennai-182.jpg"height="170"width="160" alt="Candids">
+<img src="https://img.freepik.com/premium-photo/photograph-cute-adorable-kitten_727939-12480.jpg?w=360"height="155"width="140" alt="Kitty">
+<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/2e/36/5d/caption.jpg?w=500&h=400&s=1"height="160"width="155" alt="Mehel">
+<img src="https://www.nation.com.pk/print_images/large/2016-08-21/puppet-show-1471744508-8464.jpg"height="150"width="145" alt="puppetry">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_EcdbFCs26upo6tYydMNLqHOVmi39rsUCbQ&s"height="130"width="140" alt="Chaii">
+</div>
+    </section>
+
+    <section id="contact">
+        <h2>Feel Free To<br>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+            <div class="thank-you-message">
+                Thank-you for reaching out!</div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Photography Portfolio. All Rights Reserved. | <a href="#">Back to Top</a></p>
+    </footer>
+</body>
+</html>

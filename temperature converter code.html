@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #86c2a9;
+        }
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .container {
+            background: rgba(152, 226, 192, 0.534);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .box {
+            border: 2px solid #0d0e0f;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f3f8f8;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #020202;
+            width: calc(100% - 22px);
+        }
+        button {
+            background-color: #28a745;
+            color: rgb(247, 243, 243);
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result-box {
+            padding: 20px;
+            border: 2px solid #171a17;
+            border-radius: 10px;
+            background-color: #63cc7c;
+            color: #1d1f1d;
+            font-size: 20px;
+            font-weight: bold;
+            width: 300px;
+        }
+        .thermometer {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌡️ Temperature Converter</h1>
+    <div class="main-container">
+        <div class="container">
+            <div class="box">
+                <input type="number" id="temp" placeholder="Enter temperature" required>
+                <select id="unit">
+                    <option value="CtoF">Celsius to Fahrenheit</option>
+                    <option value="FtoC">Fahrenheit to Celsius</option>
+                    <option value="CtoK">Celsius to Kelvin</option>
+                    <option value="KtoC">Kelvin to Celsius</option>
+                    <option value="FtoK">Fahrenheit to Kelvin</option>
+                    <option value="KtoF">Kelvin to Fahrenheit</option>
+                </select>
+                <button onclick="convertTemp()">Convert</button>
+            </div>
+        </div>
+        <div id="result" class="result-box">🌡️ Result: </div>
+    </div>
+
+    <script>
+        function convertTemp() {
+            let temp = document.getElementById('temp').value;
+            let unit = document.getElementById('unit').value;
+            let result;
+            
+            if (temp === "") {
+                document.getElementById('result').innerHTML = "🌡️ Result: Please enter a temperature!";
+                return;
+            }
+            
+            temp = parseFloat(temp);
+            
+            if (unit === "CtoF") {
+                result = (temp * 9/5) + 32;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}°C = ${result.toFixed(2)}°F (Fahrenheit)`;
+            } else if (unit === "FtoC") {
+                result = (temp - 32) * 5/9;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}°F = ${result.toFixed(2)}°C (Celsius)`;
+            } else if (unit === "CtoK") {
+                result = temp + 273.15;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}°C = ${result.toFixed(2)}K (Kelvin)`;
+            } else if (unit === "KtoC") {
+                result = temp - 273.15;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}K = ${result.toFixed(2)}°C (Celsius)`;
+            } else if (unit === "FtoK") {
+                result = (temp - 32) * 5/9 + 273.15;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}°F = ${result.toFixed(2)}K (Kelvin)`;
+            } else if (unit === "KtoF") {
+                result = (temp - 273.15) * 9/5 + 32;
+                document.getElementById('result').innerHTML = `🌡️ Result: ${temp}K = ${result.toFixed(2)}°F (Fahrenheit)`;
+            }
+        }
+    </script>
+</body>
+</html>
